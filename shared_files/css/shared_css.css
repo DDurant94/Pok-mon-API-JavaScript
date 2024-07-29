@@ -1,0 +1,113 @@
+* {
+  box-sizing: border-box;
+}
+
+/* Nav bars */
+#main-nav-bar{
+  background: rgb(255, 0, 0);
+}
+
+.pokeball {
+  display: block;
+  width: 15px;
+  height: 15px;
+  background: radial-gradient(
+      white 1.14px,
+      black 1.21px 1.28px,
+      white 1.35px 1.71px,
+      black 1.78px 2.28px,
+      transparent 2.35px
+    ),
+    linear-gradient(to bottom, red 0 5.71px, black 5.78px 6.85px, white 6.92px 100%);
+  border-radius: 50%;
+  border: .57px solid black;
+  box-shadow: inset -16px -8px 0 0 rgba(0, 0, 0, 0.2);
+  animation: fall 0.5s ease-in-out 1s,
+    shake 1.25s cubic-bezier(0.36, 0.07, 0.19, 0.97) 1.5s 3,
+    catch 0.5s ease-out 5.25s forwards;
+}
+
+/* Animation Pokeball*/
+@keyframes shake {
+  0% {
+    transform: translateX(0) rotate(0);
+  }
+  20% {
+    transform: translateX(-10px) rotate(-20deg);
+  }
+  30% {
+    transform: translateX(10px) rotate(20deg);
+  }
+  50% {
+    transform: translateX(-10px) rotate(-10deg);
+  }
+  60% {
+    transform: translateX(10px) rotate(10deg);
+  }
+  100% {
+    transform: translateX(0) rotate(0);
+  }
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(-200%);
+  }
+  60% {
+    transform: translateY(0);
+  }
+  80% {
+    transform: translateY(-10%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes catch {
+  to {
+    filter: saturate(0.8) brightness(0.8);
+  }
+}
+
+#body{
+  background: black;
+  text-shadow: .8px 1.5px 2px;
+}
+
+/* header */
+#main-header-container{
+  background: linear-gradient(to bottom ,rgba(255, 0, 0, 0.796)30%,rgba(174, 174, 174, 0.889),rgba(255, 0, 0, 0.796));
+  border-bottom: .01rem solid yellow;
+
+}
+
+
+
+/* Copyrights */
+#copyrights p {
+  border-top: 2px solid yellow;
+  background-color:red;
+  margin-bottom: 0%;
+  margin-left: 0%;
+  margin-right: 0%;
+  text-align: center;
+  color: rgb(254, 254, 254);
+  text-decoration: underline;
+  border-top: 0.03rem solid yellow;
+}
+
+/* Pokemon Search Bars & result display */
+
+#poke-search-container{
+  background-color: rgba(255, 255, 0, 0.904);
+}
+
+#poke-search-bttn{
+  background-color: red;
+}
+
+#display-container{
+  background-color: rgba(255, 255, 0, 0.904);
+}
+
