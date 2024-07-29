@@ -30,8 +30,7 @@ function contentLoader(search){
 async function displayContent(search){
   try{
     const searchData = await apiFetch(search);
-    const movesUrl = await searchData.moves.map(move => this.deeperDive(move.move.url)).join('');
-    console.log(movesObject.forEach(power))
+    const movesUrl = await searchData.moves.map(move => deeperDive(move.move.url)).join('');
     // const typeUrl = await searchData.abilities.map(ability => deeperDive(ability.ability.url));
     // const unpackingTypeUrl = await typeUrl[0];
     // const abilityUrl = await searchData.abilities.map(ability => deeperDive(ability.ability.url));
@@ -40,7 +39,7 @@ async function displayContent(search){
     // const unpackStats = await statsUrl;
 
     
-  
+    console.log(movesUrl,movesObject[0].power);
     console.log(searchData);
     displayElement.innerHTML = `
       <div id="display-container" class="container-fluid-center p-4 m-2 rounded">
@@ -180,7 +179,7 @@ async function displayContent(search){
 
               <div id="moves-display-container">
 
-                ${searchData.moves.map((move) =>`<li>${move.move.name}:</li>`).join('')}
+                ${searchData.moves.map((move) =>`<li>${move.move.name}:${deeperDive(move.move.url)}</li>`).join('')}
 
               </div>
 
@@ -213,6 +212,17 @@ async function apiFetch(search){
   }
 }
 
+async function deeperDive(urlSearch){
+  try{
+    const apiResponse = await fetch(urlSearch);
+    const apiResponseData = await apiResponse.json();
+    return apiResponseData
+    // movesObject.push(apiResponseData);
+  } catch(err) {
+    console.log(err)
+  }
+}
+
 // Loading API spinner
 function Loading() {
   searchBttn.style.display = 'none';
@@ -223,14 +233,4 @@ function Loading() {
 function loaded(){
   searchBttn.style.display = 'block';
   hiddenSpinner.style.display = 'none';
-}
-
-async function deeperDive(urlSearch){
-  try{
-    const apiResponse = await fetch(urlSearch);
-    const apiResponseData = await apiResponse.json();
-    movesObject.push(apiResponseData);
-  } catch(err) {
-    console.log(err)
-  }
 }
