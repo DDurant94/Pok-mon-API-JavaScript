@@ -1,0 +1,35 @@
+#carouselExampleSlidesOnly{
+  background-color: rgba(255 201 4);
+}
+
+#home-card-bttn{
+  background-color: rgb(46 88 185);
+  color: white;
+}
+
+#home-card-bttn:hover{
+  background-color: rgba(255, 0, 0, 0.756);
+  color: rgba(0, 0, 0, 0.756);
+  text-shadow: none;
+}
+
+#card-body{
+  background-color: rgba(255 201 4);
+}
+
+#card-body-text{
+  background-color: rgba(255, 255, 255, 0.542);
+}
+
+#carousel-container{
+  background-color:  rgba(0, 0, 0, 0.241);
+  border-radius: .3rem;
+
+}
+
+@media screen and (max-width: 700px){
+  #home-card-bttn{
+    font-size: 90%;
+  } 
+}
+

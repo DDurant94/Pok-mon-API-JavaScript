@@ -1,4 +1,22 @@
 About:
+  Basic Search Page: Here, users are presented with essential information about Pokémon, including their name, base XP, height, weight, 
+  abilities, type, and stats. All of this information is interactive, and when hovered over, it highlights or lifts off the page, creating a 
+  dynamic experience for the user.
+
+  Detailed Report Page: Similar to the search page, this page provides more in-depth information about Pokémon. Additionally, it features an 
+  added section on moves. Users can explore moves in a dropdown menu, and when hovering over a move, it lights up in red, indicating which move 
+  they are examining.
+
+  More Information:
+    I used BootStrap to help my website be dynamic and responsive. Using its form validation and using Bootstrap 4, Font awesome 4, Font Awesome 
+    5 Free & Pro snippets and Bootstrap 5 Quick Snippets. elements within my web page. while using CSS to put on a more personal touch the pages.
+
+Features:
+  -Hover effects
+  -Dropdowns
+  -Slideshow for images
+  -Moving navigation bar icon
+  -Form validation
 
 Extensions:
   Bootstrap 4, Font awesome 4, Font Awesome 5 Free & Pro snippets

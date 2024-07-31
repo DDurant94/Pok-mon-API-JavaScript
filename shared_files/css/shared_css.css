@@ -4,7 +4,12 @@
 
 /* Nav bars */
 #main-nav-bar{
-  background: rgb(255, 0, 0);
+  background: rgb(46 88 185);
+}
+
+#nav-link a:hover{
+  color: rgba(255 201 4);
+  text-shadow: none;
 }
 
 .pokeball {
@@ -72,42 +77,100 @@
 
 #body{
   background: black;
-  text-shadow: .8px 1.5px 2px;
+  text-shadow: 1px 1px 3px;
 }
 
 /* header */
 #main-header-container{
-  background: linear-gradient(to bottom ,rgba(255, 0, 0, 0.796)30%,rgba(174, 174, 174, 0.889),rgba(255, 0, 0, 0.796));
-  border-bottom: .01rem solid yellow;
-
+  background: linear-gradient(to bottom ,rgb(46 88 185)30%,rgb(255 48 7),rgb(46 88 185));
+  border-bottom: .01rem solid rgba(255 201 4);
 }
-
-
 
 /* Copyrights */
 #copyrights p {
-  border-top: 2px solid yellow;
-  background-color:red;
+  border-top: 2px solid rgba(255 201 4);
+  background-color:rgb(46 88 185);
   margin-bottom: 0%;
   margin-left: 0%;
   margin-right: 0%;
   text-align: center;
   color: rgb(254, 254, 254);
   text-decoration: underline;
-  border-top: 0.03rem solid yellow;
+  border-top: 0.03rem solid rgba(255 201 4);
 }
 
 /* Pokemon Search Bars & result display */
 
 #poke-search-container{
-  background-color: rgba(255, 255, 0, 0.904);
+  background-color: rgba(255 201 4);
 }
 
 #poke-search-bttn{
-  background-color: red;
+  background-color: rgb(46 88 185);
+}
+
+#poke-search-bttn:hover{
+  background-color: rgba(255, 0, 0, 0.756);
+  color: rgba(0, 0, 0, 0.756);
 }
 
 #display-container{
-  background-color: rgba(255, 255, 0, 0.904);
+  background-color: rgba(255 201 4);
 }
 
+/* display card */
+#card{
+  background-color: rgba(46 88 185);
+  border-color: black;
+  border-width: .2rem;
+}
+
+#base-xp, #height, #weight {
+  background-color: rgb(46 88 185);
+
+}
+
+
+#base-xp:hover, #height:hover, #weight:hover{
+  background-color: rgba(0, 0, 0, 0.61);
+  color:red;
+  transform: scale(1.06);
+  text-shadow: none;
+}
+
+/* stat,type and ability */
+#stats-section,#type-section,#ability-section{
+  background-color: rgb(46 88 185);
+}
+
+#stats-section:hover,#type-section:hover,#ability-section:hover{
+  transform: scale(1.06);
+  text-shadow: none;
+}
+
+@media screen and (max-width:700px){
+  #body {
+    font-size: 80%;
+    text-shadow: none;
+  }
+
+  #header-p{
+    font-size: 135% !important;
+  }
+
+  #header-h1{
+    font-size: 220% !important;
+  }
+  
+  #nav-link a{
+    font-size: 125% !important;
+  }
+
+}
+
+@media screen and (max-width: 400px) {
+  #card-body-text h5{
+    font-size: 150%;
+  }
+
+}
